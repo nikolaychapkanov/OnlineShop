@@ -1,0 +1,30 @@
+﻿@using OnlineShop.Models;
+<h3>ProductList</h3>
+
+@foreach (var product in Products)
+{
+    <div class="card w-25">
+        <div class="card-body">
+            <h5 class="card-title">@product.Name</h5>
+            <p class="card-text">@product.Description</p>
+            <blockquote class="card-text">$@product.Price</blockquote>
+            @if (product.Stock > 0)
+            {
+                <label class="lbl lbl-primary">Pieces Left:</label>
+                <blockquote class="card-text">@product.Stock</blockquote>
+            }
+            @if (product.Stock == 0)
+            {
+                <label class="lbl lbl-primary">Out of Stock!</label>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    [EditorRequired]
+    [Parameter]
+    public List<Product> Products { get; set; } = new();
+    [Parameter]
+    public bool DisplayBuyButton { get; set; }
+}

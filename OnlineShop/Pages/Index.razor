@@ -1,0 +1,13 @@
+﻿@page "/"
+@using OnlineShop.Models;
+@using OnlineShop.Services;
+
+<PageTitle>Home</PageTitle>
+
+<h1>Online Bookstore</h1>
+
+
+<ProductList Products="Products" DisplayBuyButton="true"></ProductList>
+@code {
+    public List<Product> Products { get; set; } = ProductProviderService.Products.ToList();
+}
