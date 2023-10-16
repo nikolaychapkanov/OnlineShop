@@ -7,7 +7,7 @@
 <h1>Online Bookstore</h1>
 
 
-<ProductList Products="Products" DisplayBuyButton="true"></ProductList>
+<ProductList Products="Products"></ProductList>
 @code {
     public List<Product> Products { get; set; } = ProductProviderService.Products.ToList();
 }

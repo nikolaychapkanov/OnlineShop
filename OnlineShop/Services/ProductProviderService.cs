@@ -6,32 +6,33 @@ namespace OnlineShop.Services
     public static class ProductProviderService
     {
         public static readonly ImmutableList<Product> Products = ImmutableList.CreateRange(new List<Product>()
-    {
-        new()
         {
-            Id = Guid.NewGuid(),
-            Name = "All roads lead to Blazor Server",
-            Description = "A tutorial book for Blazor Server technology",
-            Price = 70,
-            Stock = 0
-        },
-        new()
-        {
-            Id = Guid.NewGuid(),
-            Name = "All roads lead to Blazor WASM",
-            Description = "A tutorial book for Blazor WASM technology.",
-            Price = 70,
-            Stock = 1
-        },
-        new()
-        {
-            Id = Guid.NewGuid(),
-            Name = "gRPC for Blazor WASM",
-            Description = "A tutorial book for developing a backend for Blazor WASM technology.",
-            Price = 100,
-            Stock = 4
-        }
+            new()
+            {
+                Id = Guid.NewGuid(),
+                Name = "Blazor First Steps",
+                Description = "A tutorial book for Blazor.",
+                Price = 70,
+                Stock = 0
+            },
+            new()
+            {
+                Id = Guid.NewGuid(),
+                Name = "Tekerik UI for Brazor - Completed Edition",
+                Description = "Learn to use Telerik UI from scratch.",
+                Price = 70,
+                Stock = 1
+            },
+            new()
+            {
+                Id = Guid.NewGuid(),
+                Name = "50 Amazing facts about Bulgaria",
+                Description = "First book of Slavi from The Clashers.",
+                Price = 100,
+                Stock = 4
+            }
 
-    });
+        });
+
     }
 }
